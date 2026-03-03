@@ -1,0 +1,24 @@
+// const express = require('express');
+import express from 'express';
+import home from './pages/home.js';
+import about from './pages/about.js';
+
+const app = express();
+
+app.get('', (req, res) => {
+    res.send(home());
+});
+
+app.get('/about', (req, res) => {
+    res.send(about());
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+
+
+
+
+
+
